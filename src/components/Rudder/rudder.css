@@ -1,0 +1,151 @@
+.rudder {
+	background: #57a9fe;
+	width: 100%;
+	position: relative;
+	min-height: 50px;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 1rem;
+	z-index: 1;
+}
+
+.rudder input[type="checkbox"] {
+	display: none;
+}
+
+.rudder ul {
+	display: flex;
+	gap: 1rem;
+}
+
+.rudder li {
+	background-size: 25px;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 50px;
+	height: 50px;
+}
+
+.rudder a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.rudder .null-page {
+	display: none;
+}
+
+.rudder .link-image {
+	display: none;
+}
+
+.rudder li.active {
+	background-color: #4959ee;
+	border-radius: 100%;
+}
+
+.rudder li.work-page {
+	background-image: url("../../assets/work.svg");
+}
+
+.rudder li.home-page {
+	background-image: url("../../assets/home.svg");
+}
+
+.rudder li.gallery-page {
+	background-image: url("../../assets/image.svg");
+}
+
+.rudder li.contact-page {
+	background-image: url("../../assets/contact.svg");
+}
+
+@media screen and (max-width: 500px) {
+	.rudder {
+		position: absolute;
+		bottom: 3rem;
+		right: 50%;
+		transform: translateX(50%);
+		width: fit-content;
+		border-radius: 100px;
+		padding: 0;
+	}
+
+	.rudder input[type="checkbox"] {
+		background-color: #5789fe;
+		appearance: none;
+		border: 2px solid azure;
+		display: block;
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		left: 50%;
+		border-radius: 50%;
+		transform: translateX(-50%);
+		transition: transform 0.33s, border-radius 0.33s;
+	}
+
+	.rudder input[type="checkbox"]:checked {
+		transform: translate(-50%) rotate(135deg);
+		border-radius: 0;
+	}
+
+	.rudder ul {
+		gap: 0;
+	}
+
+	.rudder input[type="checkbox"]:checked + ul {
+		gap: 1rem;
+	}
+
+	.rudder .null-page {
+		display: block;
+	}
+
+	.rudder li {
+		width: 0;
+		height: 0;
+		transition: width 0.33s, height 0.33s;
+	}
+
+	.rudder input[type="checkbox"]:checked + ul li {
+		width: 50px;
+		height: 50px;
+	}
+
+	.rudder .link-image {
+		background-image: url("../../assets/close.svg");
+		background-size: 25px;
+		background-position: center;
+		background-repeat: no-repeat;
+		display: block;
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		pointer-events: none;
+	}
+
+	.rudder input[type="checkbox"]:not(:checked) ~ .link-image.work-image {
+		background-image: url("../../assets/work.svg");
+	}
+
+	.rudder input[type="checkbox"]:not(:checked) ~ .link-image.home-image {
+		background-image: url("../../assets/home.svg");
+	}
+
+	.rudder
+		input[type="checkbox"]:not(:checked)
+		~ .link-image.gallery-image {
+		background-image: url("../../assets/image.svg");
+	}
+
+	.rudder
+		input[type="checkbox"]:not(:checked)
+		~ .link-image.contact-image {
+		background-image: url("../../assets/contact.svg");
+	}
+}
