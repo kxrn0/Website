@@ -4,13 +4,13 @@ import { makeNoise3D } from "open-simplex-noise";
 import map from "../../utilities/map";
 import "./lines.css";
 
-export default function Lines({ lines }) {
+export default function Lines({ lines, width, height }) {
 	const containerRef = useRef(null);
 	const canvas = useState(() => {
 		const renderer = new THREE.WebGLRenderer();
 		const camera = new THREE.PerspectiveCamera(
 			75,
-			window.innerWidth / window.innerHeight,
+			width / height,
 			0.1,
 			1000
 		);
@@ -116,7 +116,7 @@ export default function Lines({ lines }) {
 		scene.add(light);
 		scene.fog = new THREE.Fog(backgroundColor, 0.25, 150);
 		camera.position.set(0, 0, 75);
-		renderer.setSize(window.innerWidth, window.innerHeight);
+		renderer.setSize(width, height);
 		renderer.setClearColor(backgroundColor);
 		if (containerRef.current.innerHTML === "")
 			containerRef.current.appendChild(renderer.domElement);

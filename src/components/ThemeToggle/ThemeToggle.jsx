@@ -2,7 +2,7 @@ import { useContext } from "react";
 import ThemeContext from "../../theme_context";
 import "./theme_toggle.css";
 
-export default function ThemeToggle({ change_theme }) {
+export default function ThemeToggle({ change_theme, hidden }) {
 	const themeCon = useContext(ThemeContext);
 
 	return (
@@ -20,6 +20,7 @@ export default function ThemeToggle({ change_theme }) {
 			<div className="inputs">
 				{themeCon.themes.map((theme) => (
 					<input
+						tabIndex={hidden ? -1 : 0}
 						key={theme}
 						type="radio"
 						id={`theme-toggler-${theme}`}

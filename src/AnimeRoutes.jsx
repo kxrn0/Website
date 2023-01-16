@@ -3,6 +3,7 @@ import Work from "./pages/Work/Work";
 import Home from "./pages/Home/Home";
 import Gallery from "./pages/Gallery/Gallery";
 import Contact from "./pages/Contact/Contact";
+import projects from "./projects.js";
 import { AnimatePresence } from "framer-motion";
 
 export default function AnimeRoutes() {
@@ -11,7 +12,10 @@ export default function AnimeRoutes() {
 	return (
 		<AnimatePresence>
 			<Routes location={location} key={location.pathname}>
-				<Route path="/work" element={<Work />} />
+				<Route
+					path="/work"
+					element={<Work projects={projects} />}
+				/>
 				<Route path="/" element={<Home />} />
 				<Route path="/gallery" element={<Gallery />} />
 				<Route path="/contact" element={<Contact />} />
@@ -19,4 +23,3 @@ export default function AnimeRoutes() {
 		</AnimatePresence>
 	);
 }
-

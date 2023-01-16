@@ -1,0 +1,45 @@
+.popup {
+	--duration: 3s;
+	position: fixed;
+	inset: 0;
+	transition: opacity var(--duration);
+	z-index: 1;
+}
+
+.popup .close-popup {
+	background-image: url("../../assets/close.svg");
+	background-color: #dfefffcd;
+	border-radius: 100%;
+	width: 2rem;
+	height: 2rem;
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	border: none;
+	z-index: 1;
+}
+
+.popup.hidden {
+	pointer-events: none;
+	opacity: 0;
+}
+
+.popup .backdrop {
+	background: #12123255;
+	position: absolute;
+	inset: 0;
+}
+
+.popup .container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: transform var(--duration);
+}
+
+.popup.shown .container {
+	transform: translate(-50%, calc(50vh - 50%));
+}
+
+

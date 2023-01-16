@@ -2,7 +2,6 @@ import { useState, useRef } from "react";
 import { BrowserRouter } from "react-router-dom";
 import Rudder from "./components/Rudder/Rudder";
 import AnimeRoutes from "./AnimeRoutes";
-import Eye from "./components/Eye/Eye";
 import ThemeContext from "./theme_context.js";
 import "./style.css";
 
@@ -29,7 +28,6 @@ function App() {
 					}}
 				>
 					<Rudder />
-					<Eye change_theme={change_theme} />
 					<AnimeRoutes />
 				</ThemeContext.Provider>
 			</BrowserRouter>

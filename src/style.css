@@ -10,4 +10,7 @@
 	background: gray;
 	min-height: 100vh;
 	position: relative;
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
 }

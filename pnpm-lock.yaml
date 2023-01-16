@@ -4,7 +4,6 @@ specifiers:
   '@types/react': ^18.0.26
   '@types/react-dom': ^18.0.9
   '@vitejs/plugin-react': ^3.0.0
-  devicon: ^2.15.1
   framer-motion: ^8.2.0
   open-simplex-noise: ^2.5.0
   react: ^18.2.0
@@ -14,7 +13,6 @@ specifiers:
   vite: ^4.0.0
 
 dependencies:
-  devicon: 2.15.1
   framer-motion: 8.2.0_biqbaboplfbrettd7655fr4n2y
   open-simplex-noise: 2.5.0
   react: 18.2.0
@@ -656,10 +654,6 @@ packages:
     dependencies:
       ms: 2.1.2
     dev: true
-
-  /devicon/2.15.1:
-    resolution: {integrity: sha512-iyapbDVaq1PgMSMZ4IekgjH230aSUU4kHmZ142lQ2TJ+9HB4P4V78eNDkyaQEEoi0KJhxIGPcTSFqxHaZ4OMyw==}
-    dev: false
 
   /electron-to-chromium/1.4.284:
     resolution: {integrity: sha512-M8WEXFuKXMYMVr45fo8mq0wUrrJHheiKZf6BArTKk9ZBYCKJEOU5H8cdWgDT+qCVZf7Na4lVUaZsA+h6uA9+PA==}

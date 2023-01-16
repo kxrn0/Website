@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "devicon": "^2.15.1",
     "framer-motion": "^8.2.0",
     "open-simplex-noise": "^2.5.0",
     "react": "^18.2.0",
