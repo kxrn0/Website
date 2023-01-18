@@ -67,4 +67,8 @@
 	.home .summary {
 		width: 90vw;
 	}
+
+	.home .lines canvas {
+		transform: scale(1);
+	}
 }

@@ -91,7 +91,7 @@ import mnemonics_appH06 from "./assets/project_images/mnemonics_app/horizontal/0
 const projects = [
 	{
 		name: "clock",
-		description: "this is a clock",
+		description: "Simple Clock written in vanilla javaScript.",
 		radius: 600,
 		repoLink: "https://github.com/kxrn0/Clock",
 		liveLink: "https://kxrn0.github.io/Clock/",
@@ -107,7 +107,7 @@ const projects = [
 	},
 	{
 		name: "tic tac toe",
-		description: "this is a tic_tac_toe",
+		description: "Tic tac toe game written in vanilla javaScript.",
 		radius: 600,
 		repoLink: "https://github.com/kxrn0/Tic-tac-toe-game",
 		liveLink: "https://kxrn0.github.io/Tic-tac-toe-game/dist",
@@ -141,7 +141,7 @@ const projects = [
 	},
 	{
 		name: "calculator",
-		description: "this is a calculator",
+		description: "Calculator written in vanilla javaScript.",
 		radius: 600,
 		repoLink: "https://github.com/kxrn0/Calc",
 		liveLink: "https://kxrn0.github.io/Calc/",
@@ -157,7 +157,7 @@ const projects = [
 	},
 	{
 		name: "battle ship",
-		description: "this is a battle ship",
+		description: "Battle ship game written in vanilla javaScript.",
 		radius: 600,
 		repoLink: "https://github.com/kxrn0/Battle-Ship",
 		liveLink: "https://kxrn0.github.io/Battle-Ship/dist/",
@@ -191,7 +191,7 @@ const projects = [
 	},
 	{
 		name: "habit tracker",
-		description: "this is a habit_tracker",
+		description: "WORK IN PROGRESS. It still has some bugs, so it's not recommended to use. React is used for the frontend, and firebase for the backend.",
 		radius: 600,
 		repoLink: "https://github.com/kxrn0/Habit-Tracker",
 		liveLink: "https://kxrn0.github.io/Habit-Tracker",
@@ -225,7 +225,7 @@ const projects = [
 	},
 	{
 		name: "mnemonics app",
-		description: "this is a mnemonics_app",
+		description: "WORK IN PROGRESS. Uses React for the frontend, and firebase for the backend",
 		radius: 600,
 		repoLink: "https://github.com/kxrn0/Mnemonics-App",
 		liveLink: "https://mokuren-51ee3.web.app/",

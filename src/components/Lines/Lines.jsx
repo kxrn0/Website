@@ -22,7 +22,7 @@ export default function Lines({ lines, width, height }) {
 
 	useEffect(() => {
 		const { renderer, camera, scene, noise } = canvas;
-		const light = new THREE.DirectionalLight(0x12dfff);
+		const light = new THREE.DirectionalLight(0xffffff, 2.5);
 		const backgroundColor = 0x777797;
 		const rows = [];
 		let linesAnime;
