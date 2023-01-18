@@ -3,7 +3,7 @@ import Popup from "../Popup/Popup";
 import Carousel from "../Carousel/Carousel";
 import "./project.css";
 
-export default function Project({ Component, project }) {
+export default function Project({ Component, project, containerStyle }) {
 	const [isOpen, setIsOpen] = useState(false);
 	const [image, setImage] = useState("");
 
@@ -13,6 +13,7 @@ export default function Project({ Component, project }) {
 				shown={isOpen}
 				close={() => setIsOpen(false)}
 				duration={0.33}
+				containerStyle={containerStyle}
 			>
 				<Component {...project.data} />
 			</Popup>

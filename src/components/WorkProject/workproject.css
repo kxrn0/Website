@@ -1,0 +1,61 @@
+.work-project {
+	max-height: 100vh;
+	width: 100vw;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 3.5rem;
+}
+
+.work-project .project-info {
+	background: #00003055;
+	box-shadow: 0 0 20px 0 #00000033;
+	backdrop-filter: blur(3px);
+	border: 2px solid #000000;
+	border-radius: 10px;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	width: 600px;
+	margin: 150px auto;
+}
+
+.work-project .project-name {
+	text-transform: capitalize;
+	color: azure;
+	font-size: 2rem;
+}
+
+.work-project .project-description {
+	line-height: 1.25rem;
+	color: azure;
+}
+
+.work-project .project-links {
+	display: flex;
+	gap: 1rem;
+}
+
+.work-project .project-links a {
+	background: #a170e9;
+	width: 7rem;
+	height: 3rem;
+	display: grid;
+	place-items: center;
+	color: azure;
+	font-size: 1.5rem;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+@media screen and (max-width: 800px) {
+	.work-project {
+		padding: 1rem;
+	}
+
+	.work-project .project-info {
+		margin: 50px auto;
+		width: 90vw;
+	}
+}

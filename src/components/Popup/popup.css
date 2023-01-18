@@ -32,14 +32,19 @@
 
 .popup .container {
 	position: absolute;
-	top: 0;
+	top: -100vh;
 	left: 50%;
 	transform: translateX(-50%);
 	transition: transform var(--duration);
+	max-height: 90vh;
+	overflow-y: scroll;
+	padding: 1rem;
+}
+
+.popup .container::-webkit-scrollbar {
+	display: none;
 }
 
 .popup.shown .container {
-	transform: translate(-50%, calc(50vh - 50%));
+	transform: translate(-50%, calc(150vh - 50%));
 }
-
-

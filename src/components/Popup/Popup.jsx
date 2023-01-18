@@ -1,17 +1,22 @@
 import { useState, useEffect } from "react";
 import "./popup.css";
 
-export default function Popup({ children, shown, close, duration = 0.33 }) {
+export default function Popup({ children, shown, close, duration, containerStyle }) {
 	const [hasContent, setHasContent] = useState(shown);
 
-	function close_popup() {
-		close();
-
-		setTimeout(() => setHasContent(), 330);
-	}
-
 	useEffect(() => {
+		let timeout;
+
+		timeout = null;
+
 		if (shown) setHasContent(true);
+		else
+			timeout = setTimeout(
+				() => setHasContent(false),
+				1000 * duration
+			);
+
+		return () => clearTimeout(timeout);
 	}, [shown]);
 
 	return (
@@ -21,11 +26,11 @@ export default function Popup({ children, shown, close, duration = 0.33 }) {
 		>
 			<button
 				className="close-popup"
-				onClick={close_popup}
+				onClick={close}
 				tabIndex={shown ? 0 : -1}
 			></button>
-			<div className="backdrop" onClick={close_popup}></div>
-			<div className="container">
+			<div className="backdrop" onClick={close}></div>
+			<div className="container" style={containerStyle}>
 				{hasContent ? children : null}
 			</div>
 		</div>

@@ -8,6 +8,9 @@ export default function Box() {
 	const [background, setBackground] = useState("");
 
 	useEffect(() => {
+		let tenPrintAnime;
+		let noiseAnime;
+
 		function ten_print() {
 			const canvas = frontRef.current;
 			const context = canvas.getContext("2d");
@@ -51,7 +54,8 @@ export default function Box() {
 						y++;
 						presentDay = presentTime;
 					}
-					requestAnimationFrame(anime);
+					tenPrintAnime =
+						requestAnimationFrame(anime);
 				} else setBackground(canvas.toDataURL());
 			}
 
@@ -96,7 +100,7 @@ export default function Box() {
 				if (y >= cellH) y = 0;
 				else y++;
 
-				requestAnimationFrame(anime);
+				noiseAnime = requestAnimationFrame(anime);
 			}
 
 			function init() {
@@ -110,6 +114,11 @@ export default function Box() {
 		noise();
 
 		ten_print();
+
+		return () => {
+			cancelAnimationFrame(tenPrintAnime);
+			cancelAnimationFrame(noiseAnime);
+		};
 	}, []);
 
 	return (

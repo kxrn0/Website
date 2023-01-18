@@ -1,13 +1,12 @@
 import { motion } from "framer-motion";
 import Project from "../../components/Project/Project";
 import WorkProject from "../../components/WorkProject/WorkProject";
-import "./work.css";
 
 export default function Work({ projects }) {
 	return (
-		<motion.div className="work">
-			<h1 className="work-title">Work</h1>
-			<div className="projects-container">
+		<motion.div className="work basic">
+			<h1 className="basic-title">Work</h1>
+			<div className="basic-container">
 				{projects.map((project) => (
 					<Project
 						key={project.name}

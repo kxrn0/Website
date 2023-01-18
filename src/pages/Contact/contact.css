@@ -1,0 +1,18 @@
+.contact .links {
+	display: flex;
+	gap: 2rem;
+}
+
+.contact .links a {
+	display: block;
+	width: 2rem;
+	height: 2rem;
+}
+
+.contact .links .reddit {
+	background-image: url("../../assets/reddit.svg");
+}
+
+.contact .links .github {
+	background-image: url("../../assets/github.svg");
+}

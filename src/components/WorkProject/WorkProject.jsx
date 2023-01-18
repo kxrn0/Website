@@ -1,4 +1,5 @@
 import Carousel from "../Carousel/Carousel";
+import "./workproject.css";
 
 export default function WorkProject({
 	images,
@@ -9,7 +10,7 @@ export default function WorkProject({
 	liveLink,
 }) {
 	return (
-		<div className="wrapper">
+		<div className="work-project">
 			<Carousel images={images} radius={radius} />
 			<div className="project-info">
 				<h1 className="project-name">{name}</h1>

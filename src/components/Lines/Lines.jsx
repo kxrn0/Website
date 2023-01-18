@@ -25,6 +25,7 @@ export default function Lines({ lines, width, height }) {
 		const light = new THREE.DirectionalLight(0x12dfff);
 		const backgroundColor = 0x777797;
 		const rows = [];
+		let linesAnime;
 
 		function create_line(n, index) {
 			const spheres = [];
@@ -102,7 +103,7 @@ export default function Lines({ lines, width, height }) {
 			for (let row of rows) row.update();
 
 			renderer.render(scene, camera);
-			requestAnimationFrame(anime);
+			linesAnime = requestAnimationFrame(anime);
 		}
 
 		for (let i = 0; i < lines; i++) {
@@ -121,6 +122,8 @@ export default function Lines({ lines, width, height }) {
 		if (containerRef.current.innerHTML === "")
 			containerRef.current.appendChild(renderer.domElement);
 		anime();
+
+		return () => cancelAnimationFrame(linesAnime);
 	}, []);
 
 	return <div className="lines" ref={containerRef}></div>;
